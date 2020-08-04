@@ -10,8 +10,8 @@ This is a test project demonstrating how to test Xero UI with Selenide (Selenium
 Type from command line for running tests in different browsers:
 
 ```
-git clone codeURL
-cd xero
+git clone https://github.com/jimmysATcommits/xeroAddBankAccount.git
+cd xeroAddBankAccount
 mvn clean test -P chrome
 mvn clean test -P firefox
 mvn clean test -P edge
@@ -24,8 +24,8 @@ mvn clean test -P edge
 Type from command line for running tests in different browsers:
 
 ```
-git clone codeURL
-cd xero
+git clone https://github.com/jimmysATcommits/xeroAddBankAccount.git
+cd xeroAddBankAccount
 ./gradlew chrome
 ./gradlew firefox
 ./gradlew edge
