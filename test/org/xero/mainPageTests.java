@@ -3,6 +3,7 @@ package org.xero.mainpage;
 import com.codeborne.selenide.junit.TextReport;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.Before;
 import org.junit.After;
 import org.junit.rules.TestRule;
@@ -28,12 +29,12 @@ public class mainPageTests {
     public void logIntoXero() {
         new loginPage().loginUsingTestAccount();
     }
-    @Test
+    @Ignore
     public void tryThingsOutMenuTests() {
     	xeroMainPage.getCreateAndSendInvoiceLink().shouldBe(visible);
     	xeroMainPage.getAddOthersDetailsLink().shouldBe(visible);
     }
-    @Test
+    @Ignore
     public void HeaderMenuTests() {
     	xeroMainPage.getUserIconButton().shouldBe(enabled);
     	xeroMainPage.getPayrollMenu().shouldBe(enabled);
