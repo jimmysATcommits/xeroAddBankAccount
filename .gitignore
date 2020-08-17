@@ -2,4 +2,5 @@
 /build
 /target
 /out
+/bin
 .idea/

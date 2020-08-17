@@ -57,7 +57,7 @@ public class AddANZBankAccountTest extends AddBankAccountPage{
     public static Object[][] TestAccountSet2() {    	 
         Object[][] data = new Object[][]{
         	    //accountName, accountType, accountNumber, currency
-                {"brand new test account3","Loan",  "01-7676-0900986-05", "NZD - New Zealand Dollar"}
+            {"Test credit card","Credit Card",  "2345", "NZD - New Zealand Dollar"},
         };
         return data;
     }
@@ -67,7 +67,6 @@ public class AddANZBankAccountTest extends AddBankAccountPage{
     	boolean continueToAddAccount = false;
     	boolean testForUniqueName    = false;
     	xeroMainPage.getDashBoardLinkElement().waitUntil(enabled, DASH_BOARD_WAIT_TIME);
-    	xeroMainPage.getDashBoardLinkElement().click();
     	String pageSource = WebDriverRunner.getWebDriver().getPageSource();
     	utilFunction.logMessage("test account name   - " + accName);
     	utilFunction.logMessage("test account number - " + accNumber);
@@ -117,7 +116,6 @@ public class AddANZBankAccountTest extends AddBankAccountPage{
     public void User_CanEnterAccountNameUpTo30Characters() {
     	String longAccountName="longAccou012345678901234567890"; //30 characters
      	xeroMainPage.getDashBoardLinkElement().waitUntil(enabled, DASH_BOARD_WAIT_TIME);
-    	xeroMainPage.getDashBoardLinkElement().click();
     	anzAccountPage.getConnectBankAccLinkElement().click();
         anzAccountPage.getAddBank_connection().click();
         anzAccountPage.getAccountNameInputElement().setValue(longAccountName + "more characters");
@@ -129,7 +127,6 @@ public class AddANZBankAccountTest extends AddBankAccountPage{
     public void User_CanEnterAccountNumberUpTo20Characters() {
     	String longAccountNumber = "12345678901234567890"; //20 characters
      	xeroMainPage.getDashBoardLinkElement().waitUntil(enabled, DASH_BOARD_WAIT_TIME);
-    	xeroMainPage.getDashBoardLinkElement().click();
     	anzAccountPage.getConnectBankAccLinkElement().click();
         anzAccountPage.getAddBank_connection().click();
         anzAccountPage.getAccountNameInputElement().setValue("Test Account Name");
@@ -141,7 +138,6 @@ public class AddANZBankAccountTest extends AddBankAccountPage{
     @Test
     public void Error_WhenAccountInfoIsMissing(){
      	xeroMainPage.getDashBoardLinkElement().waitUntil(enabled, DASH_BOARD_WAIT_TIME);
-    	xeroMainPage.getDashBoardLinkElement().click();
     	anzAccountPage.getConnectBankAccLinkElement().click();
         anzAccountPage.getAddBank_connection().click();
         anzAccountPage.getAccountNameLabelElement().shouldBe(visible);
